@@ -1,4 +1,5 @@
 import { formatDate } from '@/app/_lib/utils';
+import MainSearch from '@/app/components/home/MainSearch';
 import Link from 'next/link';
 
 export default function Home() {
@@ -6,7 +7,9 @@ export default function Home() {
 
   return (
     <main className="pt-[80px]">
-      <div className="pt-[60px] pb-[120px] px-[20px] flex flex-col">
+      <div className="pt-[60px] pb-[120px] px-[20px]">
+        <MainSearch />
+
         <Link href="/blog" className="mr-[20px]">
           blog
         </Link>

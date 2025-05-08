@@ -1,0 +1,30 @@
+.footer-flow::before,
+.footer-flow::after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 100%;
+  background: linear-gradient(270deg, rgba(19, 19, 19, 0) 0%, #131313 100%);
+  z-index: 10;
+}
+.footer-flow::before {
+  left: 0;
+  top: 0;
+}
+.footer-flow::after {
+  right: 0;
+  top: 0;
+}
+.footer-flow [class*='swiper-wrapper'] {
+  transition-timing-function: linear !important;
+}
+.footer-flow [class*='swiper-slide'] {
+  width: auto;
+  height: 64px;
+}
+
+@media (max-width: 767px) {
+  .footer-flow [class*='swiper-slide'] {
+    height: 32px;
+  }
+}

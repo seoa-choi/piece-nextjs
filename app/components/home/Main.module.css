@@ -1,0 +1,28 @@
+.main-search [class*='search-animation'] {
+  position: relative;
+}
+.main-search [class*='search-animation']::after {
+  content: '';
+  position: absolute;
+  top: -2.5px;
+  left: -2.5px;
+  right: -2.5px;
+  bottom: -2.5px;
+  border-radius: 100px;
+  background: linear-gradient(60deg, #10cfc9, #4dc4ea, #1c93ff, #8e75ff);
+  z-index: -1;
+  background-size: 300% 300%;
+  animation: aniGradient 3s ease alternate infinite;
+}
+
+@keyframes aniGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

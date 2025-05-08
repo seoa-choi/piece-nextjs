@@ -19,7 +19,7 @@ export default function Find({ animate }: { animate: boolean }) {
           animate
             ? 'translate-y-0 bg-white border-t-1 border-t-[#E2E8F0]'
             : '-translate-y-full bg-none border-none'
-        } max-lg:p-[20px]`}
+        } max-lg:p-[20px] max-lg:top-[63px]`}
       >
         <div className="max-w-[1420px] mx-auto max-lg:w-full">
           <div className="w-[760px] mx-auto max-lg:w-full">
@@ -39,7 +39,7 @@ export default function Find({ animate }: { animate: boolean }) {
                 />
               </button>
             </div>
-            <div className="flex justify-center gap-x-[8px] mt-[24px] max-lg:justify-start">
+            <div className="flex justify-center gap-[8px] mt-[24px] max-lg:justify-start flex-wrap">
               {btnList.map((btn, i) => (
                 <button
                   type="button"

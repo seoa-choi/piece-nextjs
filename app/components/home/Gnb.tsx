@@ -34,6 +34,11 @@ export default function Gnb({
         isShow ? 'opacity-0 invisible' : 'opacity-100 visible'
       } `}
     >
+      <div
+        className={`w-[100vw] h-[100vw] bg-[rgba(19,19,19,0.6)] backdrop-blur-[20px] absolute top-[80px] left-0 -z-1 ${
+          isActive ? 'opacity-100 visible' : 'opacity-0 invisible'
+        }`}
+      ></div>
       {menus.map((item) => (
         <li key={item.menu}>
           <Link
@@ -51,7 +56,7 @@ export default function Gnb({
             }`}
           >
             <ul
-              className={`flex gap-x-[60px] justify-center bg-white absolute left-[50%] -translate-x-[50%] h-[79px] w-full ${
+              className={`flex gap-x-[60px] justify-center bg-white absolute left-[50%] -translate-x-[50%] h-[79px] w-full z-100 ${
                 isActive === item.menu
                   ? 'visible opacity-100'
                   : 'invisible opacity-0'
