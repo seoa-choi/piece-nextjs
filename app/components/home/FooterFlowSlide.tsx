@@ -45,18 +45,19 @@ export default function FooterFlowSlide() {
       <div className={`w-full absolute left-0 ${styles['footer-flow']}`}>
         <Swiper
           modules={[Autoplay]}
+          loop={true}
           loopAdditionalSlides={6}
-          observer={true}
-          observeParents={true}
+          // observer={true}
+          // observeParents={true}
           mousewheel={false}
           simulateTouch={false}
           allowTouchMove={false}
           grabCursor={false}
-          loop={true}
           speed={12000}
           autoplay={{
             delay: 0,
             disableOnInteraction: false,
+            stopOnLastSlide: true,
           }}
           breakpoints={{
             320: {

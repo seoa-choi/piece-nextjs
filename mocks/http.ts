@@ -6,6 +6,7 @@ import { postsHandlers } from '@/mocks/posts-handlers';
 import { articlesHandlers } from '@/mocks/articles-handlers';
 import { blogPostsHandlers } from '@/mocks/blog-posts-handlers';
 import { blogUsersHandlers } from '@/mocks/blog-users-handlers';
+import { magazineHandlers } from '@/mocks/magazine-handlers';
 
 const app = express();
 const port = 9090;
@@ -24,7 +25,8 @@ app.use(
     ...postsHandlers,
     ...articlesHandlers,
     ...blogPostsHandlers,
-    ...blogUsersHandlers
+    ...blogUsersHandlers,
+    ...magazineHandlers
   )
 ); // MSW 핸들러 연결
 

@@ -9,11 +9,11 @@ const btnList = [
 
 export default function MainSearch() {
   return (
-    <div className={`max-w-[1460px] mx-auto ${styles['main-search']}`}>
-      <h3 className="text-[64px] text-[#131313] text-center font-bold leading-[84px] whitespace-pre-wrap break-keep mb-[40px]">
+    <div className={`max-w-[1460px] mx-auto ${styles['main-search']} `}>
+      <h3 className="text-[64px] text-[#131313] text-center font-bold leading-[84px] whitespace-pre-wrap break-keep mb-[40px] max-sm:text-[32px] max-sm:mb-[20px] max-sm:leading-[44px] ">
         더 쉽고 안전하게, 부자되는 투자 제안
       </h3>
-      <div className="search-animation max-w-[760px] border-none bg-white rounded-[40px] p-[24px] h-[80px] flex items-center mx-auto max-lg:border-[1px] max-lg:border-[#DADCE3] max-lg:h-[44px] max-lg:p-0 max-lg:pl-[20px] max-lg:pr-[12px]">
+      <div className="search-animation max-w-[760px] border-none bg-white rounded-[40px] p-[24px] h-[80px] flex items-center mx-auto max-lg:border-[1px] max-lg:border-[#DADCE3] max-lg:h-[44px] max-lg:p-0 max-lg:pl-[20px] max-lg:pr-[12px] max-sm:hidden">
         <input
           type="search"
           placeholder="증권 상품을 검색해보세요!"
@@ -29,7 +29,7 @@ export default function MainSearch() {
           />
         </button>
       </div>
-      <div className="flex justify-center gap-[8px] mt-[24px] max-lg:justify-start flex-wrap">
+      <div className="flex justify-center gap-[8px] mt-[24px] max-lg:justify-start flex-wrap max-sm:hidden">
         {btnList.map((btn, i) => (
           <button
             type="button"

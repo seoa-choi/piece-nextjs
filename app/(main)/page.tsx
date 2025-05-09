@@ -1,5 +1,8 @@
 import { formatDate } from '@/app/_lib/utils';
+import MainAtoZ from '@/app/components/home/MainAtoZ';
 import MainSearch from '@/app/components/home/MainSearch';
+import MainSlideBottom from '@/app/components/home/MainSlideBottom';
+import MainSlideTop from '@/app/components/home/MainSlideTop';
 import Link from 'next/link';
 
 export default function Home() {
@@ -9,7 +12,9 @@ export default function Home() {
     <main className="pt-[80px]">
       <div className="pt-[60px] pb-[120px] px-[20px]">
         <MainSearch />
-
+        <MainSlideTop />
+        <MainSlideBottom />
+        <MainAtoZ />
         <Link href="/blog" className="mr-[20px]">
           blog
         </Link>
