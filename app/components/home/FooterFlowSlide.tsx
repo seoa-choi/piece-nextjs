@@ -6,6 +6,7 @@ import 'swiper/css';
 import Image from 'next/image';
 import styles from './MainSlider.module.css';
 
+// 슬라이더 멈춤으로 같은 내용 x2
 const imgs = [
   {
     id: 1,
@@ -37,6 +38,37 @@ const imgs = [
     src: '/images/footer-slide/footer_slide_6.png',
     alt: '이미지6',
   },
+
+  {
+    id: 7,
+    src: '/images/footer-slide/footer_slide_1.png',
+    alt: '이미지1',
+  },
+  {
+    id: 8,
+    src: '/images/footer-slide/footer_slide_2.png',
+    alt: '이미지2',
+  },
+  {
+    id: 9,
+    src: '/images/footer-slide/footer_slide_3.png',
+    alt: '이미지3',
+  },
+  {
+    id: 10,
+    src: '/images/footer-slide/footer_slide_4.png',
+    alt: '이미지4',
+  },
+  {
+    id: 11,
+    src: '/images/footer-slide/footer_slide_5.png',
+    alt: '이미지5',
+  },
+  {
+    id: 12,
+    src: '/images/footer-slide/footer_slide_6.png',
+    alt: '이미지6',
+  },
 ];
 
 export default function FooterFlowSlide() {
@@ -46,13 +78,13 @@ export default function FooterFlowSlide() {
         <Swiper
           modules={[Autoplay]}
           loop={true}
-          loopAdditionalSlides={6}
+          loopAdditionalSlides={3}
           // observer={true}
           // observeParents={true}
-          mousewheel={false}
-          simulateTouch={false}
-          allowTouchMove={false}
-          grabCursor={false}
+          // mousewheel={false}
+          // simulateTouch={false}
+          // grabCursor={false}
+          // allowTouchMove={false}
           speed={12000}
           autoplay={{
             delay: 0,

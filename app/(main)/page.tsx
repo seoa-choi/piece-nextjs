@@ -3,6 +3,7 @@ import MainAtoZ from '@/app/components/home/MainAtoZ';
 import MainSearch from '@/app/components/home/MainSearch';
 import MainSlideBottom from '@/app/components/home/MainSlideBottom';
 import MainSlideTop from '@/app/components/home/MainSlideTop';
+import MainTidings from '@/app/components/home/MainTidings';
 import Link from 'next/link';
 
 export default function Home() {
@@ -10,11 +11,12 @@ export default function Home() {
 
   return (
     <main className="pt-[80px]">
-      <div className="pt-[60px] pb-[120px] px-[20px]">
+      <div className="pt-[60px] pb-[120px] px-[20px] max-w-[1460px] mx-auto ">
         <MainSearch />
         <MainSlideTop />
         <MainSlideBottom />
         <MainAtoZ />
+        <MainTidings />
         <Link href="/blog" className="mr-[20px]">
           blog
         </Link>
