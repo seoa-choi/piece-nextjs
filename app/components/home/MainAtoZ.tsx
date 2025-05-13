@@ -1,9 +1,12 @@
 'use client';
 
-import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import { useQuery } from '@tanstack/react-query';
 import Image from 'next/image';
 import Link from 'next/link';
-import styles from './Main.module.css';
+import styles from './Style.module.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 type Magazine = {
   id: number;
@@ -14,8 +17,6 @@ type Magazine = {
 };
 
 export default function MainAtoZ() {
-  const queryClient = useQueryClient();
-
   const {
     isPending,
     data: magazineData,
@@ -28,28 +29,20 @@ export default function MainAtoZ() {
     },
   });
 
-  const { mutate } = useMutation({
-    mutationFn: (magazine: Partial<Magazine>) => {
-      return fetch('http://localhost:9090/magazine', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(magazine),
-      });
-    },
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['magazine'] });
-    },
-    onError: (error) => {
-      console.error('error', error);
-    },
-  });
-
   const filteredMagazine = magazineData?.filter((magaz) => magaz.id <= 8) || [];
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      AOS.init();
+    }
+  }, []);
+
   return (
-    <div className="py-[120px] max-sm:py-[40px]">
+    <div
+      className="py-[120px] max-sm:py-[40px]"
+      data-aos="fade-up"
+      data-aos-duration="2000"
+    >
       <h3 className="text-[#1A202C] text-[48px] font-bold leading-[64px] mb-[40px] max-sm:text-[22px] max-sm:leading-[28px] max-sm:mb-[20px]">
         투자에 도움되는
         <br />
@@ -79,10 +72,10 @@ export default function MainAtoZ() {
                   />
                 </div>
               </div>
-              <div className="gird gap-[8px]">
-                <div className="mt-[24px] max-sm:mt-[16px]">
+              <div className="flex flex-col gap-[8px]">
+                <div className="mt-[24px] max-sm:mt-[16px] w-full h-auto line-clamp-2 break-words">
                   <p
-                    className={`${styles['hover-deco']} text-[28px] leading-[40px] text-[#292a2e] font-semibold line-clamp-2 text-ellipsis break-keep max-sm:text-[16px] max-sm:leading-[22px]`}
+                    className={`${styles['hover-deco']} text-[28px] leading-[40px] text-[#292a2e] font-semibold max-sm:text-[16px] max-sm:leading-[22px]`}
                   >
                     {item.postTitle}
                   </p>

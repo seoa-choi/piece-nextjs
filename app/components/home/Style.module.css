@@ -28,7 +28,7 @@
   }
 }
 
-/* A to Z 호버 */
+/* 메인 A to Z 호버 */
 .hover-scale > div {
   overflow: hidden;
 }
@@ -43,10 +43,10 @@
   background: linear-gradient(transparent calc(100% - 3px), rgb(0, 0, 0) 3px) 0%
     0% / 0% 100% no-repeat;
   display: inline;
-  transition: all 1s;
+  transition: all 0.9s;
 }
 
-/* tidings Second 말풍선꼬리 after 처리 */
+/* 메인 tidings Second 말풍선꼬리 after 처리 */
 .balloon-pointer {
   position: relative;
   font-size: 18px;
@@ -73,9 +73,64 @@
     cover;
 }
 
+/* 메인 하단 큐알코드 */
+.qr {
+  margin: 0px auto 42px;
+  height: 150px;
+}
+
+@keyframes qrBalloon {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.arrow {
+  background: #40d9d4;
+  font-size: 16px;
+  color: #131313;
+  padding: 9px 16px;
+  font-weight: 600;
+  border-radius: 100px;
+  width: fit-content;
+  margin: 0 auto 40px;
+  position: relative;
+  animation: qrBalloon 1.9s ease-in-out infinite;
+}
+.arrow::before {
+  content: '';
+  position: absolute;
+  border-bottom: 8px solid #40d9d4;
+  border-top: 0px solid #40d9d4;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 프로덕트 슬라이드 */
+.product-slide [class*='swiper-wrapper'] {
+  transition-timing-function: linear !important;
+}
+.product-slide [class*='swiper-slide'] {
+  width: auto;
+}
+
 @media (max-width: 767px) {
   .balloon-pointer {
     font-size: 14px;
     line-height: 20px;
+  }
+
+  .qr {
+    margin: 0px auto 16px;
+    height: 90px;
+  }
+
+  .arrow {
+    display: none;
   }
 }

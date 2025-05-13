@@ -10,7 +10,7 @@ import { useEffect, useState } from 'react';
 const menus = [
   {
     menu: '상품',
-    link: '',
+    link: '/producthome',
     subMenu: [
       { menuItem: '상품 목록', path: '' },
       { menuItem: '청약 가이드', path: '' },

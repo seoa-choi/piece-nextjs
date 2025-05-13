@@ -84,7 +84,7 @@ export default function FooterFlowSlide() {
           // mousewheel={false}
           // simulateTouch={false}
           // grabCursor={false}
-          // allowTouchMove={false}
+          allowTouchMove={false}
           speed={12000}
           autoplay={{
             delay: 0,

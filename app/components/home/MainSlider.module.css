@@ -57,6 +57,7 @@
 .main-second-slide [class*='swiper-wrapper'] {
   transition-timing-function: linear !important;
 }
+/* 슬라이드 사이즈 자동 맞춤됨 */
 .main-second-slide [class*='swiper-slide'] {
   width: auto;
 }
@@ -78,6 +79,7 @@
 .footer-flow::after {
   right: 0;
   top: 0;
+  transform: rotate(-180deg);
 }
 .footer-flow [class*='swiper-wrapper'] {
   transition-timing-function: linear !important;

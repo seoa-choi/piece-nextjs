@@ -12,7 +12,7 @@ export default function KakaoCounsel() {
         alt="카톡 상담하기"
         width={640}
         height={320}
-        className="absolute right-0 bottom-0 max-w-[320px] w-[calc(26.6667vw)] z-1 max-sm:left-[50%] -translate-x-[50%] max-sm:w-[calc(71.1111vw)]"
+        className="absolute right-0 bottom-0 max-w-[320px] w-[calc(26.6667vw)] z-1 max-sm:left-[50%] max-sm:-translate-x-[50%] max-sm:w-[calc(71.1111vw)]"
       />
       <p className="text-[28px] text-[#292A2E] font-semibold mb-[16px] max-sm:text-[22px] max-sm:leading-[28px] max-sm:mb-[8px]">
         카톡 상담하기
@@ -30,7 +30,7 @@ export default function KakaoCounsel() {
         alt="카톡상담"
         width={120}
         height={120}
-        className="absolute right-0 bottom-0 z-10"
+        className="absolute right-[-1px] bottom-[-1px] z-10"
       />
     </Link>
   );

@@ -5,6 +5,7 @@ import { useState } from 'react';
 
 type Menus = {
   menu: string;
+  link: string;
   subMenu: {
     menuItem: string;
     path: string;
@@ -33,6 +34,7 @@ export default function Gnb({
       className={`flex items-center max-lg:hidden ${
         isShow ? 'opacity-0 invisible' : 'opacity-100 visible'
       } `}
+      onMouseLeave={handleLeaveMenu}
     >
       <div
         className={`w-[100vw] h-[100vw] bg-[rgba(19,19,19,0.6)] backdrop-blur-[20px] absolute top-[80px] left-0 -z-1 ${
@@ -42,8 +44,12 @@ export default function Gnb({
       {menus.map((item) => (
         <li key={item.menu}>
           <Link
-            href=""
-            className="block px-[32px] h-[80px] leading-[80px] text-[18px] text-gray-600 font-bold text-center"
+            href={item.link}
+            className={`block px-[32px] h-[80px] leading-[80px] text-[18px] text-gray-600 font-bold text-center relative after:absolute after:left-0 after:bottom-0 ${
+              isActive === item.menu
+                ? 'after:w-full after:h-1 after:border-b-2 border-[#292a2e]'
+                : ''
+            } `}
             onMouseEnter={() => handleEnterMenu(item.menu)}
           >
             {item.menu}

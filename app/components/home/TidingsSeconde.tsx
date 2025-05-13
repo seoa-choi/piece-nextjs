@@ -1,6 +1,6 @@
 import KakaoCounsel from '@/app/components/KakaoCounsel';
 import Link from 'next/link';
-import styles from './Main.module.css';
+import styles from './Style.module.css';
 import Image from 'next/image';
 
 export default function TidingsSeconde() {
@@ -35,7 +35,7 @@ export default function TidingsSeconde() {
             alt="제휴 문의하기"
             width={640}
             height={320}
-            className="absolute right-0 bottom-0 max-w-[320px] w-[calc(26.6667vw)] z-1 max-sm:left-[50%] -translate-x-[50%] max-sm:w-[calc(71.1111vw)]"
+            className="absolute right-0 bottom-0 max-w-[320px] w-[calc(26.6667vw)] z-1 max-sm:left-[50%] max-sm:-translate-x-[50%] max-sm:w-[calc(71.1111vw)]"
           />
           <div className="flex flex-col gap-[10px] max-sm:gap-[8px]">
             <p className="text-[28px] text-white font-semibold leading-[40px] max-sm:text-[22px] max-sm:leading-[28px]">
@@ -50,7 +50,7 @@ export default function TidingsSeconde() {
             alt="카톡상담"
             width={120}
             height={120}
-            className="absolute right-0 bottom-0 z-10"
+            className="absolute right-[-1px] bottom-[-1px] z-10"
           />
         </Link>
       </div>

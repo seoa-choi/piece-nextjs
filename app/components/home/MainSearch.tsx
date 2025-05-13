@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from './Main.module.css';
+import styles from './Style.module.css';
 
 const btnList = [
   { menu: '상품 목록', url: '' },

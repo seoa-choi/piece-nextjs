@@ -8,7 +8,7 @@ const btnList = [
 
 export default function Find({ animate }: { animate: boolean }) {
   return (
-    <div className="fixed left-0 w-full max-lg:h-[100vh] max-lg:bg-white">
+    <div className="fixed left-0 w-full max-lg:h-[100vh] max-lg:bg-white z-90">
       <div
         className={`w-full h-[100vh] ${
           animate ? 'bg-[rgba(19,19,19,0.6)]' : 'bg-none'
