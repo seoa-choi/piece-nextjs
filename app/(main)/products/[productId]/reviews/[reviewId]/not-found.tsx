@@ -10,7 +10,7 @@ export default function NotFound() {
   const reviewId = pathname.split('/')[4];
 
   return (
-    <main className="flex flex-col items-center justify-center h-full">
+    <main className="flex flex-col items-center justify-center h-full pt-[80px]">
       <p className="text-[20px]">
         {productId}번 상품에 대한 {reviewId}번 리뷰를 찾을 수 없습니다.
       </p>

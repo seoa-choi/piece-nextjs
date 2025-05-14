@@ -6,7 +6,7 @@ import ProductSecondSlide from '@/app/components/producthome/ProductSecondSlide'
 export default function ProductHome() {
   return (
     <main className="pt-[80px]">
-      <div className="">
+      <div className="max-w-[1921px]">
         <div className="text-center py-[40px] px-[20px]">
           <p className="text-[#8C919F] text-[18px] mb-[24px] font-semibold max-sm:text-[14px] max-sm:mb-[16px]">
             상품
@@ -30,6 +30,7 @@ export default function ProductHome() {
                 alt="작은경고문구"
                 width={17}
                 height={16}
+                priority
               />
               <p className="text-[14px] text-[#8C919F] leading-[20px]">
                 과거 수익률이 미래의 수익률을 보장하는 것은 아닙니다.
@@ -38,6 +39,30 @@ export default function ProductHome() {
           </div>
         </div>
         <ProductSecondSlide />
+        <div className="max-w-[1420px] mx-auto py-[80px] px-[20px] max-sm:py-[40px]">
+          <div className="flex flex-col items-center gap-[20px]">
+            <div>
+              <Image
+                src="/images/product/img_producthome_guide.png"
+                alt="청약가이드 이미지"
+                width={320}
+                height={320}
+                className="max-sm:w-[160px] max-sm:h-[160px]"
+              />
+            </div>
+
+            <p className="text-[48px] text-[#131313] leading-[64px] font-bold max-sm:text-[22px] max-sm:leading-[28px] max-sm:font-semibold">
+              청약 가이드 살펴보세요
+            </p>
+
+            <Link
+              href=""
+              className="block bg-[#131313] py-[12px] px-[20px] rounded-[100px] text-white text-[16px] tracking-[-0.03em] text-center mx-auto w-fit"
+            >
+              청약 가이드 보기
+            </Link>
+          </div>
+        </div>
       </div>
     </main>
   );

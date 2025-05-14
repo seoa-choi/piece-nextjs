@@ -23,7 +23,7 @@ export default function Error({
   }
 
   return (
-    <div>
+    <div className="p-[80px]">
       <p>{error.message}</p>
       <button type="button" onClick={() => reload()} className="btn">
         다시 시도

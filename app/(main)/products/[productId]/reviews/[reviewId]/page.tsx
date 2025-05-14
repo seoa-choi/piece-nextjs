@@ -26,7 +26,7 @@ export default async function ProductReview({
   }
 
   return (
-    <main className="p-[30px]">
+    <main className="p-[80px]">
       <h2 className="text-[26px] font-bold">
         Review {reviewId} for product {productId}
       </h2>

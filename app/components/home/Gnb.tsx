@@ -35,6 +35,7 @@ export default function Gnb({
         isShow ? 'opacity-0 invisible' : 'opacity-100 visible'
       } `}
       onMouseLeave={handleLeaveMenu}
+      onClick={handleLeaveMenu}
     >
       <div
         className={`w-[100vw] h-[100vw] bg-[rgba(19,19,19,0.6)] backdrop-blur-[20px] absolute top-[80px] left-0 -z-1 ${

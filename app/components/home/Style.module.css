@@ -117,6 +117,40 @@
 }
 .product-slide [class*='swiper-slide'] {
   width: auto;
+  height: 540px;
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(140px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes upDown2 {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(140px);
+  }
+}
+.product-slide [class*='swiper-slide'] .up-down {
+  transform: translateY(40px);
+}
+.product-slide [class*='swiper-slide']:nth-child(odd) .up-down {
+  animation: upDown 10s linear infinite alternate running;
+}
+.product-slide [class*='swiper-slide']:nth-child(even) .up-down {
+  animation: upDown2 10s linear infinite alternate running;
+}
+.product-slide [class*='swiper-slide'] img {
+  border-radius: 32px;
+}
+.product-slide [class*='swiper-pagination'] {
+  display: none;
 }
 
 @media (max-width: 767px) {
@@ -132,5 +166,58 @@
 
   .arrow {
     display: none;
+  }
+
+  .product-slide {
+    height: auto;
+  }
+  .product-slide [class*='swiper-wrapper'] {
+    transition-timing-function: var(
+      --swiper-wrapper-transition-timing-function,
+      initial
+    ) !important;
+  }
+  .product-slide [class*='swiper-slide'] {
+    height: auto;
+  }
+  .product-slide [class*='swiper-slide'] .up-down {
+    transform: translateY(0px);
+    aspect-ratio: 320/400;
+    width: 100%;
+    padding: 0 20px;
+  }
+  .product-slide [class*='swiper-slide']:nth-child(odd) .up-down,
+  .product-slide [class*='swiper-slide']:nth-child(even) .up-down {
+    animation: none;
+  }
+  .product-slide [class*='swiper-slide'] .up-down img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .product-slide [class*='swiper-pagination'] {
+    display: block;
+  }
+  .product-slide [class*='swiper-pagination-clickable'] {
+    height: 24px;
+    margin: 32px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .product-slide
+    [class*='swiper-pagination-clickable']
+    [class*='swiper-pagination-bullet'] {
+    width: 8px;
+    height: 8px;
+    margin: 0 8px;
+    background: #ccc;
+    border-radius: 4px;
+  }
+  .product-slide
+    [class*='swiper-pagination-clickable']
+    [class*='swiper-pagination-bullet-active'] {
+    background: #000;
   }
 }

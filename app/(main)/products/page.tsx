@@ -4,7 +4,7 @@ export default function Products() {
   const productId = 100;
 
   return (
-    <main className="p-[30px]">
+    <main className="p-[80px]">
       <h2 className="text-[26px] font-bold">products</h2>
       <ul>
         <li>
