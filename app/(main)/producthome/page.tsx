@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import ProductFirstSlide from '@/app/components/producthome/ProductFirstSlide';
-import ProductSecondSlide from '@/app/components/producthome/ProductSecondSlide';
+import ProductFirstSlide from '@/app/components/product-home/ProductFirstSlide';
+import ProductSecondSlide from '@/app/components/product-home/ProductSecondSlide';
 
 export default function ProductHome() {
   return (

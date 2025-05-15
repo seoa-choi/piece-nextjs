@@ -12,7 +12,7 @@ const menus = [
     menu: '상품',
     link: '/producthome',
     subMenu: [
-      { menuItem: '상품 목록', path: '' },
+      { menuItem: '상품 목록', path: '/productprogress' },
       { menuItem: '청약 가이드', path: '' },
     ],
   },
@@ -90,7 +90,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="bg-[rgba(255,255,255,0.8)] fixed w-full top-0 z-100">
+      <header className="bg-[rgba(255,255,255,0.8)] backdrop-blur-[20px] fixed w-full top-0 z-100">
         <div className="px-[20px] max-w-[1420px] h-[80px] mx-auto flex items-center justify-between max-lg:h-[64px] max-lg:p-[16px]">
           <h2
             className={`text-[26px] font-bold max-lg:w-[108px]  ${

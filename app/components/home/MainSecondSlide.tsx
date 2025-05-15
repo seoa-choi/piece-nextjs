@@ -22,7 +22,7 @@ export default function MainSecondSlide({
   pdStyle?: React.CSSProperties;
 }) {
   return (
-    <div className={`${styles['main-second-slide']}`} style={{ ...pdStyle }}>
+    <div className={`${styles['main-second-slide']} `} style={{ ...pdStyle }}>
       <Swiper
         modules={[Autoplay]}
         loop={true}

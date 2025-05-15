@@ -51,6 +51,16 @@
 
 /* 메인 두번째 슬라이드 */
 .main-second-slide {
+  /* 뷰포트에 맞게 100% */
+  width: calc(100vw - 10px);
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50vw);
+  overflow-x: hidden;
+}
+.main-second-slide > [class*='swiper'] {
   padding: 0 20px;
 }
 
