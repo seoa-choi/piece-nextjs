@@ -1,5 +1,7 @@
 import PiecePagination from '@/app/components/PiecePagination';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 type ProductProgress = {
   id: number;
@@ -12,9 +14,35 @@ type ProductProgress = {
 
 export default function ProductsEnd({
   endData,
+  page,
+  setPage,
+  params,
 }: {
   endData: ProductProgress[];
+  page: number;
+  setPage: (num: number) => void;
+  params: URLSearchParams;
 }) {
+  const [totalPage, setTotalPage] = useState(0);
+  const router = useRouter();
+  const itemsPerPage = 10;
+  const startIndex = (page - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const paginatedData = endData.slice(startIndex, endIndex);
+
+  // console.log(paginatedData); 서버에서X 데이터 필터링 후 슬라이스
+  // api 요청 후 필터처리 하지 말고 요청 전에 분류하는걸로
+
+  // totalpage 계산
+  useEffect(() => {
+    setTotalPage(Math.ceil(endData.length / 10));
+  }, [endData]);
+
+  useEffect(() => {
+    params.set('page', page.toString());
+    router.push(`?${params.toString()}`);
+  }, [page]);
+
   return (
     <div>
       <div className="w-full h-[56px] bg-[rgba(255,255,255,0.9)] backdrop-blur-[20px] sticky left-0 top-[63px] after:absolute after:left-0 after:right-0 after:bottom-0 after:bg-[#EAECF0] after:h-[1px] max-sm:px-[20px] ">
@@ -26,8 +54,8 @@ export default function ProductsEnd({
         </button>
       </div>
       <div className="pt-[40px] pb-[80px] max-sm:pt-[20px] max-sm:pb-[40px] max-sm:px-[20px]">
-        <ul className="max-w-[1180px] mx-auto grid grid-cols-2 gap-[40px] max-sm:gap-x-[12px]">
-          {endData.map((item) => {
+        <ul className="max-w-[1180px] mx-auto grid grid-cols-2 gap-[40px] px-[20px] max-sm:gap-x-[12px]">
+          {paginatedData.map((item) => {
             const regex = /(\d+%)/; // 숫자+퍼센트 부분 찾기
             const parts = item.tit.split(regex); // 기준으로 문자열 분리
 
@@ -106,7 +134,7 @@ export default function ProductsEnd({
             );
           })}
         </ul>
-        <PiecePagination />
+        <PiecePagination page={page} setPage={setPage} totalPage={totalPage} />
       </div>
     </div>
   );

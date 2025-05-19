@@ -2,7 +2,7 @@
 
 import ProductsEnd from '@/app/components/product-progress/ProductsEnd';
 import { useQuery } from '@tanstack/react-query';
-import { use, useEffect, useState } from 'react';
+import { use, useState } from 'react';
 
 type ProductProgress = {
   id: number;
@@ -19,17 +19,19 @@ export default function ProductProgress({
   searchParams: Promise<{ page: string }>;
 }) {
   const [page, setPage] = useState(1);
-  const [totalPage, setTotalPage] = useState(0);
   const paramsObj = use(searchParams);
   // 프라미스 해제된 검색 파라메터 객체를 URLSearchParams의 인스턴스로 복제
-  // const [params] = useState(new URLSearchParams(paramsObj));
+  const [params] = useState(new URLSearchParams(paramsObj));
 
   const {
     isPending,
     data: allData,
     isError,
     error,
-  } = useQuery<ProductProgress[]>({
+  } = useQuery<{
+    allData: ProductProgress[];
+    total: number;
+  }>({
     queryKey: ['productProgress', page],
     queryFn: () => {
       return fetch(`http://localhost:9090/productProgress?page=${page}`).then(
@@ -38,15 +40,10 @@ export default function ProductProgress({
     },
   });
 
-  const endData = allData?.filter((item) => Boolean(item.ps)) || [];
-  // console.log(endData);
-
-  // data 변경 시 totalpage 계산
-  // useEffect(() => {
-  //   if (allData?.total) {
-  //     setTotalPage(Math.ceil(allData.total / 10));
-  //   }
-  // }, [allData]);
+  // 객체였다가 배열로 변함 filter는 배열에만 사용가능 오류, Array.isArray로 해결
+  const endData = Array.isArray(allData)
+    ? allData?.filter((item) => Boolean(item.ps))
+    : [];
 
   return (
     <main className="pt-[80px] relative">
@@ -59,7 +56,12 @@ export default function ProductProgress({
             Let's PIECE!
           </p>
         </div>
-        <ProductsEnd endData={endData} />
+        <ProductsEnd
+          endData={endData}
+          page={page}
+          setPage={setPage}
+          params={params}
+        />
       </div>
     </main>
   );

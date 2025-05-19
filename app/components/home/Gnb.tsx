@@ -52,6 +52,7 @@ export default function Gnb({
                 : ''
             } `}
             onMouseEnter={() => handleEnterMenu(item.menu)}
+            onClick={(e) => e.preventDefault}
           >
             {item.menu}
           </Link>

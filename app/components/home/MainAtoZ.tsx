@@ -1,12 +1,7 @@
-'use client';
-
 import { useQuery } from '@tanstack/react-query';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Style.module.css';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useEffect } from 'react';
 
 type Magazine = {
   id: number;
@@ -30,12 +25,6 @@ export default function MainAtoZ() {
   });
 
   const filteredMagazine = magazineData?.filter((magaz) => magaz.id <= 8) || [];
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      AOS.init();
-    }
-  }, []);
 
   return (
     <div

@@ -1,3 +1,5 @@
+'use client';
+
 import { formatDate } from '@/app/_lib/utils';
 import MainAtoZ from '@/app/components/home/MainAtoZ';
 import MainQr from '@/app/components/home/MainQr';
@@ -6,9 +8,18 @@ import MainSlideBottom from '@/app/components/home/MainSlideBottom';
 import MainSlideTop from '@/app/components/home/MainSlideTop';
 import MainTidings from '@/app/components/home/MainTidings';
 import Link from 'next/link';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 export default function Home() {
   const now = formatDate(new Date());
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      AOS.init();
+    }
+  }, []);
 
   return (
     <main className="pt-[80px]">

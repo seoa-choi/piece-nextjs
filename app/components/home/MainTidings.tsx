@@ -1,18 +1,7 @@
-'use client';
-
 import TidingsFirst from '@/app/components/home/TidingsFirst';
 import TidingsSeconde from '@/app/components/home/TidingsSeconde';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import { useEffect } from 'react';
 
 export default function MainTidings() {
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      AOS.init();
-    }
-  }, []);
-
   return (
     <div
       className="py-[120px] max-sm:py-[40px]"

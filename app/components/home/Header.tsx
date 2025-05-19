@@ -10,15 +10,15 @@ import { useEffect, useState } from 'react';
 const menus = [
   {
     menu: '상품',
-    link: '/producthome',
+    link: '/product-home',
     subMenu: [
-      { menuItem: '상품 목록', path: '/productprogress' },
-      { menuItem: '청약 가이드', path: '' },
+      { menuItem: '상품 목록', path: '/product-progress' },
+      { menuItem: '청약 가이드', path: '/guide' },
     ],
   },
   {
     menu: '매거진',
-    link: '',
+    link: '/magazine',
     subMenu: [
       { menuItem: '포트폴리오', path: '' },
       { menuItem: '인사이트 칼럼', path: '' },
@@ -97,7 +97,7 @@ export default function Header() {
               isShow && breakPoint ? 'max-lg:h-[24px]' : 'max-lg:h-[32px]'
             }`}
           >
-            <Link href="/">
+            <Link href="/" onClick={(e) => e.preventDefault}>
               <Image
                 src={`${
                   isShow && breakPoint
