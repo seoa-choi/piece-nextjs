@@ -19,10 +19,10 @@ type ProductHome = {
   color: string;
 };
 
-// 모바일 스와이퍼 슬라이드 제거
 export default function ProductFirstSlide() {
   const [isMobile, setIsMobile] = useState(false);
 
+  // 모바일 스와이퍼 슬라이드 제거
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 767);

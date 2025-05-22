@@ -20,22 +20,22 @@ const menus = [
     menu: '매거진',
     link: '/magazine',
     subMenu: [
-      { menuItem: '포트폴리오', path: '' },
-      { menuItem: '인사이트 칼럼', path: '' },
-      { menuItem: '어바웃 트렌드', path: '' },
+      { menuItem: '포트폴리오', path: '/magazine?page=1&tab=Portfolio' },
+      { menuItem: '인사이트 칼럼', path: '/magazine?page=1&tab=Insight' },
+      { menuItem: '어바웃 트렌드', path: '/magazine?page=1&tab=Trend' },
     ],
   },
   {
     menu: '공시',
-    link: '',
+    link: '/disclosure',
     subMenu: [
-      { menuItem: '투자공시', path: '' },
+      { menuItem: '투자공시', path: '/disclosure' },
       { menuItem: '경영공시', path: '' },
     ],
   },
   {
     menu: '고객센터',
-    link: '',
+    link: '/support-home',
     subMenu: [
       { menuItem: '공지사항', path: '' },
       { menuItem: 'FAQ', path: '' },
@@ -135,6 +135,7 @@ export default function Header() {
               className={`px-[16px] py-[9px] text-[16px] h-[40px] rounded-[100px] bg-[#131313] font-bold text-white hover:bg-[rgba(19,19,19,0.8)] ${
                 isShow ? 'hidden' : 'block'
               } max-lg:hidden`}
+              onClick={() => (window.location.href = '/app-qr')}
             >
               앱 다운로드
             </button>

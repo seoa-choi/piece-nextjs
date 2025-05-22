@@ -1,4 +1,4 @@
-import { generatePagination } from '@/app/_lib/utils';
+import { generatePagination2 } from '@/app/_lib/utils2';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
@@ -14,7 +14,7 @@ export default function PiecePagination({
   const [pageArr, setPageArr] = useState<(number | string)[]>([]);
 
   useEffect(() => {
-    const arr = generatePagination(page, totalPage);
+    const arr = generatePagination2(page, totalPage);
     setPageArr(arr);
   }, [page, totalPage]);
 
@@ -25,7 +25,7 @@ export default function PiecePagination({
           type="button"
           className={`px-[14px] py-[12px] h-[40px] rounded-[8px] hover:bg-[#EDF2F7] ${
             page === 1 ? 'opacity-[0.4]' : 'opacity-100'
-          }`}
+          }  shrink-0`}
           onClick={() => setPage(page - 1)}
           disabled={page === 1}
         >
@@ -37,25 +37,31 @@ export default function PiecePagination({
           />
         </button>
         <ol className="flex items-center gap-[4px]">
-          {pageArr.map((item, i) => (
-            <li key={i}>
-              <button
-                type="button"
-                className={`w-[32px] h-[40px] text-[16px] font-semibold leading-[16px] hover:text-[#292a2e]
+          {pageArr.map((item, i) => {
+            if (item === '...') {
+              return <span key={i}>...</span>;
+            } else {
+              return (
+                <li key={i}>
+                  <button
+                    type="button"
+                    className={`w-[32px] h-[40px] text-[16px] font-semibold leading-[16px] hover:text-[#292a2e]
                   ${page === item ? 'text-[#292a2e]' : 'text-[#b8bcc8]'}
-                  `}
-                onClick={() => setPage(item as number)}
-              >
-                {item}
-              </button>
-            </li>
-          ))}
+                   max-sm:text-[15px] max-sm:w-[24px]`}
+                    onClick={() => setPage(item as number)}
+                  >
+                    {item}
+                  </button>
+                </li>
+              );
+            }
+          })}
         </ol>
         <button
           type="button"
           className={`px-[14px] py-[12px] h-[40px] rounded-[8px] hover:bg-[#EDF2F7] ${
             page === totalPage ? 'opacity-[0.4]' : 'opacity-100'
-          }`}
+          } shrink-0`}
           onClick={() => setPage(page + 1)}
           disabled={page === totalPage}
         >

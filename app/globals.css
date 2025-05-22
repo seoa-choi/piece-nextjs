@@ -236,6 +236,8 @@
     /* line-height: normal; */
     /* 프리텐다드 기본줄간격 좁으므로 변경 */
     line-height: 1.5;
+    /* 기본 굵기 */
+    font-weight: 500;
   }
 
   /* 스킵 네비 */

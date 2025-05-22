@@ -7,12 +7,14 @@ const downloadImage = [
   {
     img: '/images/ic_appStore.bf462930.svg',
     alt: '앱스토어',
+    path: 'https://apps.apple.com/kr/app/%ED%94%BC%EC%8A%A4-%ED%86%A0%ED%81%B0%EC%A6%9D%EA%B6%8C-sto-%EA%B8%B0%EB%B0%98-%EC%9E%90%EC%82%B0%EC%9A%B4%EC%9A%A9-%ED%94%8C%EB%9E%AB%ED%8F%BC/id1615510313',
     w: 126,
     h: 32,
   },
   {
     img: '/images/ic_googlePlay.8d576249.svg',
     alt: '구글플레이',
+    path: 'https://play.google.com/store/apps/details?id=run.piece.dev',
     w: 142,
     h: 26,
   },
@@ -48,7 +50,7 @@ export default function Qr() {
           {downloadImage.map((img, i) => (
             <Link
               key={i}
-              href=""
+              href={img.path}
               className="bg-[#131313] py-[12px] px-[20px] rounded-[100px]"
             >
               <Image src={img.img} alt={img.alt} width={img.w} height={img.h} />

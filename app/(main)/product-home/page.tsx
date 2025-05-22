@@ -19,7 +19,7 @@ export default function ProductHome() {
           <ProductFirstSlide />
           <div>
             <Link
-              href="/productprogress"
+              href="/product-progress"
               className="block bg-[#131313] py-[12px] px-[20px] rounded-[100px] text-white text-[16px] tracking-[-0.03em] text-center mx-auto w-fit"
             >
               전체 상품 더보기

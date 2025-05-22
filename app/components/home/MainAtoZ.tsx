@@ -20,7 +20,9 @@ export default function MainAtoZ() {
   } = useQuery<Magazine[]>({
     queryKey: ['magazine'],
     queryFn: () => {
-      return fetch('http://localhost:9090/magazine').then((res) => res.json());
+      return fetch('http://localhost:9090/magazine-atoz').then((res) =>
+        res.json()
+      );
     },
   });
 

@@ -144,35 +144,35 @@
   {
     "id": 21,
     "title": "인사이트 칼럼",
-    "img": "/images/atoz/213_2_thumbnail.png",
+    "img": "/images/atoz/213_1_thumbnail.png",
     "postTitle": "디지털 금융과 블록체인",
     "postSubTitle": "미래 금융 생태계 변화"
   },
   {
     "id": 22,
     "title": "어바웃 트렌드",
-    "img": "/images/atoz/213_2_thumbnail.png",
+    "img": "/images/atoz/213_1_thumbnail.png",
     "postTitle": "디지털 혁신이 바꾸는 세상",
     "postSubTitle": "금융과 IT의 융합"
   },
   {
     "id": 23,
     "title": "인사이트 칼럼",
-    "img": "/images/atoz/213_2_thumbnail.png",
+    "img": "/images/atoz/213_1_thumbnail.png",
     "postTitle": "AI 기반 투자 전략",
     "postSubTitle": "데이터와 머신러닝"
   },
   {
     "id": 24,
     "title": "어바웃 트렌드",
-    "img": "/images/atoz/213_2_thumbnail.png",
+    "img": "/images/atoz/213_1_thumbnail.png",
     "postTitle": "금융 속 암호화폐",
     "postSubTitle": "규제와 시장 전망"
   },
   {
     "id": 25,
     "title": "인사이트 칼럼",
-    "img": "/images/atoz/213_2_thumbnail.png",
+    "img": "/images/atoz/213_1_thumbnail.png",
     "postTitle": "모바일 뱅킹의 미래",
     "postSubTitle": "디지털 화폐 시대"
   },
@@ -180,176 +180,478 @@
   {
     "id": 26,
     "title": "인사이트 칼럼",
-    "img": "/images/atoz/213_2_thumbnail.png",
+    "img": "/images/atoz/213_1_thumbnail.png",
     "postTitle": "디지털 신원과 금융 보안",
     "postSubTitle": "차세대 인증 기술"
   },
   {
     "id": 27,
     "title": "어바웃 트렌드",
-    "img": "/images/atoz/213_2_thumbnail.png",
+    "img": "/images/atoz/213_1_thumbnail.png",
     "postTitle": "국제 결제 시스템 혁신",
     "postSubTitle": "글로벌 금융 네트워크의 진화"
   },
   {
     "id": 28,
     "title": "인사이트 칼럼",
-    "img": "/images/atoz/213_2_thumbnail.png",
+    "img": "/images/atoz/213_1_thumbnail.png",
     "postTitle": "스마트 계약과 핀테크",
     "postSubTitle": "자동화 금융 서비스"
   },
   {
     "id": 29,
     "title": "어바웃 트렌드",
-    "img": "/images/atoz/213_2_thumbnail.png",
+    "img": "/images/atoz/213_1_thumbnail.png",
     "postTitle": "AI 기반 투자 관리",
     "postSubTitle": "자동화된 자산 운용 방식"
   },
   {
     "id": 30,
     "title": "인사이트 칼럼",
-    "img": "/images/atoz/213_2_thumbnail.png",
+    "img": "/images/atoz/213_1_thumbnail.png",
     "postTitle": "디지털 금융 생태계",
     "postSubTitle": "금융 서비스의 통합"
   },
   {
     "id": 31,
     "title": "어바웃 트렌드",
-    "img": "/images/atoz/213_2_thumbnail.png",
+    "img": "/images/atoz/322_thumbnail.png",
     "postTitle": "무현금 사회의 도래",
     "postSubTitle": "디지털 결제 방식의 확산"
   },
   {
     "id": 32,
     "title": "인사이트 칼럼",
-    "img": "/images/atoz/213_2_thumbnail.png",
+    "img": "/images/atoz/322_thumbnail.png",
     "postTitle": "사이버 보안과 금융",
     "postSubTitle": "보안 위협 대응 및 해결책"
   },
   {
     "id": 33,
     "title": "어바웃 트렌드",
-    "img": "/images/atoz/213_2_thumbnail.png",
+    "img": "/images/atoz/322_thumbnail.png",
     "postTitle": "로보 어드바이저의 진화",
     "postSubTitle": "AI 기반 투자 상담"
   },
   {
     "id": 34,
     "title": "인사이트 칼럼",
-    "img": "/images/atoz/213_2_thumbnail.png",
+    "img": "/images/atoz/322_thumbnail.png",
     "postTitle": "핀테크 산업 전망",
     "postSubTitle": "다가오는 기술 혁신"
   },
   {
     "id": 35,
     "title": "어바웃 트렌드",
-    "img": "/images/atoz/213_2_thumbnail.png",
+    "img": "/images/atoz/322_thumbnail.png",
     "postTitle": "금융 데이터의 중요성",
     "postSubTitle": "빅데이터와 금융 인사이트"
   },
   {
     "id": 36,
     "title": "인사이트 칼럼",
-    "img": "/images/atoz/213_2_thumbnail.png",
+    "img": "/images/atoz/413_thumbnail.png",
     "postTitle": "디지털 화폐 시대",
     "postSubTitle": "CBDC와 암호화폐"
   },
   {
     "id": 37,
     "title": "어바웃 트렌드",
-    "img": "/images/atoz/213_2_thumbnail.png",
+    "img": "/images/atoz/413_thumbnail.png",
     "postTitle": "금융과 사물인터넷(IoT)",
     "postSubTitle": "스마트 디바이스 결제 기술"
   },
   {
     "id": 38,
     "title": "인사이트 칼럼",
-    "img": "/images/atoz/213_2_thumbnail.png",
+    "img": "/images/atoz/413_thumbnail.png",
     "postTitle": "블록체인과 보험 산업",
     "postSubTitle": "투명성과 보안 강화를 위한 기술"
   },
   {
     "id": 39,
     "title": "어바웃 트렌드",
-    "img": "/images/atoz/213_2_thumbnail.png",
+    "img": "/images/atoz/413_thumbnail.png",
     "postTitle": "오픈 파이낸스와 개인 맞춤 금융",
     "postSubTitle": "금융 서비스의 개방성과 통합"
   },
   {
     "id": 40,
     "title": "인사이트 칼럼",
-    "img": "/images/atoz/213_2_thumbnail.png",
+    "img": "/images/atoz/413_thumbnail.png",
     "postTitle": "AI 기반 재테크",
     "postSubTitle": "스마트한 투자 전략"
   },
   {
     "id": 41,
     "title": "어바웃 트렌드",
-    "img": "/images/atoz/213_2_thumbnail.png",
+    "img": "/images/atoz/piece19_story_Thumbnail.jpg",
     "postTitle": "금융 API의 역할",
     "postSubTitle": "개방형 금융 생태계"
   },
   {
     "id": 42,
     "title": "인사이트 칼럼",
-    "img": "/images/atoz/213_2_thumbnail.png",
+    "img": "/images/atoz/piece19_story_Thumbnail.jpg",
     "postTitle": "핀테크 스타트업 성공 전략",
     "postSubTitle": "혁신적 금융 모델"
   },
   {
     "id": 43,
     "title": "어바웃 트렌드",
-    "img": "/images/atoz/213_2_thumbnail.png",
+    "img": "/images/atoz/piece19_story_Thumbnail.jpg",
     "postTitle": "클라우드 금융 서비스",
     "postSubTitle": "디지털 금융 인프라 발전"
   },
   {
     "id": 44,
     "title": "인사이트 칼럼",
-    "img": "/images/atoz/213_2_thumbnail.png",
+    "img": "/images/atoz/piece19_story_Thumbnail.jpg",
     "postTitle": "기후변화와 지속가능 금융",
     "postSubTitle": "ESG 금융의 역할"
   },
   {
     "id": 45,
     "title": "어바웃 트렌드",
-    "img": "/images/atoz/213_2_thumbnail.png",
+    "img": "/images/atoz/piece19_story_Thumbnail.jpg",
     "postTitle": "AI가 바꾸는 대출 시스템",
     "postSubTitle": "신용 평가의 자동화"
   },
   {
     "id": 46,
     "title": "인사이트 칼럼",
-    "img": "/images/atoz/213_2_thumbnail.png",
+    "img": "/images/atoz/piece18_story_Thumbnail.jpg",
     "postTitle": "탈중앙화 금융(DeFi)",
     "postSubTitle": "전통 금융과의 차이점"
   },
   {
     "id": 47,
     "title": "어바웃 트렌드",
-    "img": "/images/atoz/213_2_thumbnail.png",
+    "img": "/images/atoz/piece18_story_Thumbnail.jpg",
     "postTitle": "디지털 자산의 법적 문제",
     "postSubTitle": "규제와 법률 검토"
   },
   {
     "id": 48,
     "title": "인사이트 칼럼",
-    "img": "/images/atoz/213_2_thumbnail.png",
+    "img": "/images/atoz/piece18_story_Thumbnail.jpg",
     "postTitle": "AI 기반 자동 거래",
     "postSubTitle": "알고리즘 트레이딩의 미래"
   },
   {
     "id": 49,
     "title": "어바웃 트렌드",
-    "img": "/images/atoz/213_2_thumbnail.png",
+    "img": "/images/atoz/piece18_story_Thumbnail.jpg",
     "postTitle": "국제 금융 시장의 변화",
     "postSubTitle": "금융 글로벌화의 방향"
   },
   {
     "id": 50,
     "title": "인사이트 칼럼",
+    "img": "/images/atoz/piece18_story_Thumbnail.jpg",
+    "postTitle": "스마트 결제 시스템",
+    "postSubTitle": "디지털 결제 방식 혁신"
+  },
+
+  {
+    "id": 51,
+    "title": "어바웃 트렌드",
+    "img": "/images/atoz/505_thumbnail.png",
+    "postTitle": "NFT 시장 전망",
+    "postSubTitle": "디지털 자산의 성장 가능성"
+  },
+  {
+    "id": 52,
+    "title": "인사이트 칼럼",
+    "img": "/images/atoz/505_thumbnail.png",
+    "postTitle": "블록체인과 금융",
+    "postSubTitle": "분산 원장의 혁신"
+  },
+  {
+    "id": 53,
+    "title": "어바웃 트렌드",
+    "img": "/images/atoz/505_thumbnail.png",
+    "postTitle": "금융 데이터 분석",
+    "postSubTitle": "빅데이터 활용법"
+  },
+  {
+    "id": 54,
+    "title": "인사이트 칼럼",
+    "img": "/images/atoz/505_thumbnail.png",
+    "postTitle": "메타버스와 금융",
+    "postSubTitle": "가상 공간 경제의 가능성"
+  },
+  {
+    "id": 55,
+    "title": "어바웃 트렌드",
+    "img": "/images/atoz/505_thumbnail.png",
+    "postTitle": "리스크 관리",
+    "postSubTitle": "금융 시장에서의 안정성"
+  },
+  {
+    "id": 56,
+    "title": "인사이트 칼럼",
+    "img": "/images/atoz/piece16_story_Thumbnail.jpg",
+    "postTitle": "지속가능 투자",
+    "postSubTitle": "ESG 펀드의 중요성"
+  },
+  {
+    "id": 57,
+    "title": "어바웃 트렌드",
+    "img": "/images/atoz/piece16_story_Thumbnail.jpg",
+    "postTitle": "AI 금융 어드바이저",
+    "postSubTitle": "인공지능 기반 투자 조언"
+  },
+  {
+    "id": 58,
+    "title": "인사이트 칼럼",
+    "img": "/images/atoz/piece16_story_Thumbnail.jpg",
+    "postTitle": "미래의 화폐",
+    "postSubTitle": "암호화폐 vs CBDC"
+  },
+  {
+    "id": 59,
+    "title": "어바웃 트렌드",
+    "img": "/images/atoz/piece16_story_Thumbnail.jpg",
+    "postTitle": "핀테크 스타트업 성공 사례",
+    "postSubTitle": "혁신 금융 모델 분석"
+  },
+  {
+    "id": 60,
+    "title": "인사이트 칼럼",
+    "img": "/images/atoz/piece16_story_Thumbnail.jpg",
+    "postTitle": "사이버 보안과 금융",
+    "postSubTitle": "보안 리스크 관리"
+  },
+  {
+    "id": 61,
+    "title": "어바웃 트렌드",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "디지털 은행의 미래",
+    "postSubTitle": "전통 금융을 대체할 수 있을까?"
+  },
+  {
+    "id": 62,
+    "title": "인사이트 칼럼",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "암호화폐 채굴의 경제학",
+    "postSubTitle": "채굴이 경제에 미치는 영향"
+  },
+  {
+    "id": 63,
+    "title": "어바웃 트렌드",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "금융 AI 챗봇",
+    "postSubTitle": "고객 서비스의 자동화"
+  },
+  {
+    "id": 64,
+    "title": "인사이트 칼럼",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "디지털 화폐의 진화",
+    "postSubTitle": "CBDC와 글로벌 금융"
+  },
+  {
+    "id": 65,
+    "title": "어바웃 트렌드",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "금융과 머신러닝",
+    "postSubTitle": "데이터 기반 투자 전략"
+  },
+  {
+    "id": 66,
+    "title": "인사이트 칼럼",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "자동화된 신용 평가",
+    "postSubTitle": "AI가 바꾸는 대출 시스템"
+  },
+  {
+    "id": 67,
+    "title": "어바웃 트렌드",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "디지털 금융 보안",
+    "postSubTitle": "사이버 공격에 대비하는 방법"
+  },
+  {
+    "id": 68,
+    "title": "인사이트 칼럼",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "유럽의 핀테크 규제",
+    "postSubTitle": "PSD2의 영향"
+  },
+  {
+    "id": 69,
+    "title": "어바웃 트렌드",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "AI와 보험 산업",
+    "postSubTitle": "맞춤형 보험 상품의 등장"
+  },
+  {
+    "id": 70,
+    "title": "인사이트 칼럼",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "미래의 투자 방식",
+    "postSubTitle": "AI 기반 자동 투자"
+  },
+  {
+    "id": 71,
+    "title": "어바웃 트렌드",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "디지털 자산의 법적 문제",
+    "postSubTitle": "규제와 법률 검토"
+  },
+  {
+    "id": 72,
+    "title": "인사이트 칼럼",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "핀테크 산업의 미래",
+    "postSubTitle": "기술과 금융의 융합"
+  },
+  {
+    "id": 73,
+    "title": "어바웃 트렌드",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "AI가 바꾸는 대출 시스템",
+    "postSubTitle": "신용 평가의 자동화"
+  },
+  {
+    "id": 74,
+    "title": "인사이트 칼럼",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "블록체인 기술과 금융",
+    "postSubTitle": "투명성과 신뢰의 중요성"
+  },
+  {
+    "id": 75,
+    "title": "어바웃 트렌드",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "디지털 결제 시스템",
+    "postSubTitle": "미래의 결제 방식"
+  },
+  {
+    "id": 76,
+    "title": "인사이트 칼럼",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "스마트 투자 전략",
+    "postSubTitle": "AI 기반 투자 분석"
+  },
+  {
+    "id": 77,
+    "title": "어바웃 트렌드",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "금융 시장의 변화",
+    "postSubTitle": "글로벌 경제 트렌드"
+  },
+  {
+    "id": 78,
+    "title": "인사이트 칼럼",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "암호화폐와 안정성",
+    "postSubTitle": "디지털 화폐의 도전과 기회"
+  },
+  {
+    "id": 79,
+    "title": "어바웃 트렌드",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "디지털 뱅킹",
+    "postSubTitle": "전통 금융의 변화"
+  },
+  {
+    "id": 80,
+    "title": "인사이트 칼럼",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "AI 기반 자동 거래",
+    "postSubTitle": "알고리즘 트레이딩의 미래"
+  },
+  {
+    "id": 81,
+    "title": "어바웃 트렌드",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "국제 금융 시장의 변화",
+    "postSubTitle": "금융 글로벌화의 방향"
+  },
+  {
+    "id": 82,
+    "title": "인사이트 칼럼",
     "img": "/images/atoz/213_2_thumbnail.png",
     "postTitle": "스마트 결제 시스템",
     "postSubTitle": "디지털 결제 방식 혁신"
+  },
+  {
+    "id": 83,
+    "title": "어바웃 트렌드",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "금융 AI와 투자 전략",
+    "postSubTitle": "데이터 기반 의사 결정"
+  },
+  {
+    "id": 84,
+    "title": "인사이트 칼럼",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "지속가능 금융의 미래",
+    "postSubTitle": "ESG 투자 확대"
+  },
+  {
+    "id": 85,
+    "title": "어바웃 트렌드",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "핀테크의 혁신",
+    "postSubTitle": "새로운 금융 서비스 등장"
+  },
+  {
+    "id": 86,
+    "title": "인사이트 칼럼",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "디지털 금융과 소비자 보호",
+    "postSubTitle": "안전한 금융 환경 조성"
+  },
+  {
+    "id": 87,
+    "title": "어바웃 트렌드",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "자동화 금융 서비스",
+    "postSubTitle": "AI 기반 금융 관리"
+  },
+  {
+    "id": 88,
+    "title": "인사이트 칼럼",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "가상 자산의 활용",
+    "postSubTitle": "디지털 경제의 성장"
+  },
+  {
+    "id": 89,
+    "title": "어바웃 트렌드",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "미래의 투자 방식",
+    "postSubTitle": "AI 기반 자동 투자"
+  },
+  {
+    "id": 90,
+    "title": "인사이트 칼럼",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "암호화폐의 발전",
+    "postSubTitle": "디지털 자산의 가능성"
+  },
+  {
+    "id": 91,
+    "title": "어바웃 트렌드",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "금융 시장과 빅데이터",
+    "postSubTitle": "데이터 분석의 중요성"
+  },
+  {
+    "id": 92,
+    "title": "인사이트 칼럼",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "디지털 금융의 도전",
+    "postSubTitle": "변화하는 금융 환경"
+  },
+  {
+    "id": 93,
+    "title": "어바웃 트렌드",
+    "img": "/images/atoz/213_2_thumbnail.png",
+    "postTitle": "AI와 금융 혁신",
+    "postSubTitle": "미래의 금융 모델"
   }
 ]

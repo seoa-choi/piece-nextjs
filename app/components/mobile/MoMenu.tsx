@@ -68,7 +68,10 @@ export default function MoMenu({
           </div>
         </div>
         <div className="px-[20px] pt-[16px] pb-[56px]">
-          <ul className="grid grid-cols-2 gap-x-[28px] gap-y-[40px]">
+          <ul
+            className="grid grid-cols-2 gap-x-[28px] gap-y-[40px]"
+            onClick={handleMoMenuClose}
+          >
             {menus.map((item) => (
               <li key={item.menu}>
                 <h2

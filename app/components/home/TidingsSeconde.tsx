@@ -25,7 +25,7 @@ export default function TidingsSeconde() {
         </div>
       </Link>
       <div className="grid gap-[20px]">
-        <KakaoCounsel />
+        <KakaoCounsel className="transform hover:scale-[1.02] transition-transform duration-[0.2s] ease-out cursor-pointer" />
         <Link
           href=""
           className="py-[50px] px-[40px] bg-[#131313] h-auto rounded-[40px_40px_0_40px] relative max-sm:h-[240px] max-sm:rounded-[32px_32px_0] max-sm:p-[32px] transform hover:scale-[1.02] transition-transform duration-[0.2s] ease-out"
