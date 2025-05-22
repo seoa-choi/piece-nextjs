@@ -3,6 +3,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from '../home/Style.module.css';
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 const tabMapping: Record<string, string> = {
   전체: 'All',
@@ -30,13 +31,20 @@ export default function MagazineTap({
 }) {
   const [selectedBtn, setSelectedBtn] = useState('전체');
   const [, setTotalPage] = useState(0);
+  const [activeTab, setActiveTab] = useState<string>('All');
+  const router = useRouter();
 
-  // 탭 클릭 시 버튼 액티브 변경 쿼리스트링 추가
   function handleSelectedBtn(selectedTitle: string) {
     setSelectedBtn(selectedTitle);
-    const tabKey = tabMapping[selectedTitle] || 'All';
+    setActiveTab(tabMapping[selectedTitle] || 'All');
 
-    handleTabChange(tabKey);
+    // 검색어 삭제 후 URL 업데이트
+    const params = new URLSearchParams(window.location.search);
+    params.delete('search');
+
+    router.push(`?${params.toString()}`);
+
+    handleTabChange(tabMapping[selectedTitle] || 'All');
   }
 
   // data 변경 시 totalpage 계산
@@ -45,6 +53,18 @@ export default function MagazineTap({
       setTotalPage(Math.ceil(data?.total / 12) || 0);
     }
   }, [data]);
+
+  // URL에서 tab 값을 가져와서 상태 업데이트
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const currentTab = urlParams.get('tab') || 'All';
+
+    setActiveTab(currentTab);
+    setSelectedBtn(
+      Object.keys(tabMapping).find((key) => tabMapping[key] === currentTab) ||
+        '전체'
+    );
+  }, [paramsObj.tab]);
 
   return (
     <div className={`${styles['magazine-list']}`}>
