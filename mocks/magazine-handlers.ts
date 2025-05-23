@@ -83,10 +83,9 @@ export const magazineHandlers = [
     let filteredSearch = magazine;
     if (search) {
       filteredSearch = magazine.filter(
-        (item) =>
-          item.postTitle.toLowerCase().includes(search.toLowerCase()) ||
-          item.title.toLowerCase().includes(search.toLowerCase()) ||
-          item.postSubTitle.toLowerCase().includes(search.toLowerCase())
+        (item) => item.postTitle.toLowerCase().includes(search.toLowerCase())
+        // || item.title.toLowerCase().includes(search.toLowerCase()) ||
+        // item.postSubTitle.toLowerCase().includes(search.toLowerCase())
       );
     }
 

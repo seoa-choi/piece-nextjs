@@ -1,7 +1,5 @@
-'use client';
-
 import Link from 'next/link';
-import { useState } from 'react';
+import { Dispatch, SetStateAction } from 'react';
 
 type Menus = {
   menu: string;
@@ -15,12 +13,14 @@ type Menus = {
 export default function Gnb({
   menus,
   isShow,
+  isActive,
+  setIsActive,
 }: {
   menus: Menus[];
   isShow: boolean;
+  isActive: string | null;
+  setIsActive: Dispatch<SetStateAction<string | null>>;
 }) {
-  const [isActive, setIsActive] = useState<string | null>(null);
-
   function handleEnterMenu(menuName: string): void {
     setIsActive(menuName);
   }
@@ -31,17 +31,12 @@ export default function Gnb({
 
   return (
     <ul
-      className={`flex items-center max-lg:hidden ${
+      className={`flex items-center z-100 max-lg:hidden ${
         isShow ? 'opacity-0 invisible' : 'opacity-100 visible'
       } `}
       onMouseLeave={handleLeaveMenu}
       onClick={handleLeaveMenu}
     >
-      <div
-        className={`w-[100vw] h-[100vw] bg-[rgba(19,19,19,0.6)] backdrop-blur-[20px] absolute top-[80px] left-0 -z-1 ${
-          isActive ? 'opacity-100 visible' : 'opacity-0 invisible'
-        }`}
-      ></div>
       {menus.map((item) => (
         <li key={item.menu}>
           <Link

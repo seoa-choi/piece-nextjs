@@ -56,6 +56,7 @@ export default function Header() {
   const [animate, setAnimate] = useState<boolean>(false);
   const [breakPoint, setBreakPoint] = useState(false);
   const [moIsShow, setMoIsShow] = useState<boolean>(false);
+  const [isActive, setIsActive] = useState<string | null>(null);
 
   function handleToggle() {
     if (isShow) {
@@ -111,7 +112,12 @@ export default function Header() {
               />
             </Link>
           </h2>
-          <Gnb menus={menus} isShow={isShow} />
+          <Gnb
+            menus={menus}
+            isShow={isShow}
+            isActive={isActive}
+            setIsActive={setIsActive}
+          />
           {moIsShow ? (
             <MoMenu
               menus={menus}
@@ -167,6 +173,12 @@ export default function Header() {
         </div>
       </header>
       {isShow ? <Find animate={animate} /> : null}
+      {/* 블러처리 할 컨텐츠 바로 위에 처리하기 */}
+      <div
+        className={`w-full h-[100vh] bg-[rgba(19,19,19,0.6)] backdrop-blur-[20px] fixed top-[80px] left-0 z-99  ${
+          isActive ? 'opacity-100 visible' : 'opacity-0 invisible'
+        }`}
+      ></div>
     </>
   );
 }

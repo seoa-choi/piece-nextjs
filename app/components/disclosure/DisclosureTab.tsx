@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from '../home/Style.module.css';
 import { useState } from 'react';
 
-const magazineList = [{ title: '투자공시' }, { title: '경영공시' }];
+const tab = [{ title: '투자공시' }, { title: '경영공시' }];
 
 export default function DisclosureTab() {
   const [selectedBtn, setSelectedBtn] = useState('투자공시');
@@ -15,7 +15,7 @@ export default function DisclosureTab() {
   return (
     <div className={`${styles['magazine-list']}`}>
       <Swiper>
-        {magazineList.map((item) => (
+        {tab.map((item) => (
           <SwiperSlide key={item.title}>
             <button
               type="button"
