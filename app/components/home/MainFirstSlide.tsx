@@ -52,6 +52,10 @@ export default function MainFirstSlide() {
         loop={true}
         speed={500}
         spaceBetween={0}
+        // swiper flickering when resize
+        // resizeObserver 창 크키 조절 시 변화 감지(떨림 현상) 있을 경우 false 하면 없어짐
+        // loop, autoplay인 경우 생길 수 있음
+        resizeObserver={false}
         slidesPerView={'auto'}
         pagination={{ clickable: true }}
         autoplay={{

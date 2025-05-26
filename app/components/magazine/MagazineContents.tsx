@@ -48,6 +48,7 @@ export default function MagazineContents({
       setTotalPage(Math.ceil(data?.total / 12) || 0);
     }
   }, [data]);
+
   return (
     <div className="max-w-[1420px] p-[20px] mx-auto">
       <div className="mb-[20px]">

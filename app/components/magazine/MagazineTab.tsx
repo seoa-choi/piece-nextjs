@@ -30,7 +30,6 @@ export default function MagazineTap({
   handleTabChange: (tabKey: string) => void;
 }) {
   const [selectedBtn, setSelectedBtn] = useState('전체');
-  const [, setTotalPage] = useState(0);
   const [activeTab, setActiveTab] = useState<string>('All');
   const router = useRouter();
 
@@ -46,13 +45,6 @@ export default function MagazineTap({
 
     handleTabChange(tabMapping[selectedTitle] || 'All');
   }
-
-  // data 변경 시 totalpage 계산
-  useEffect(() => {
-    if (data) {
-      setTotalPage(Math.ceil(data?.total / 12) || 0);
-    }
-  }, [data]);
 
   // URL에서 tab 값을 가져와서 상태 업데이트
   useEffect(() => {

@@ -54,7 +54,7 @@ export default function ProductsEnd({
         </button>
       </div>
       <div className="pt-[40px] pb-[80px] max-sm:pt-[20px] max-sm:pb-[40px] max-sm:px-[20px]">
-        <ul className="max-w-[1180px] mx-auto grid grid-cols-2 gap-[40px] px-[20px] max-sm:gap-x-[12px]">
+        <ul className="max-w-[1180px] mx-auto grid grid-cols-2 gap-[40px] px-[20px] max-sm:gap-x-[12px] max-sm:px-0">
           {paginatedData.map((item) => {
             const regex = /(\d+%)/; // 숫자+퍼센트 부분 찾기
             const parts = item.tit.split(regex); // 기준으로 문자열 분리

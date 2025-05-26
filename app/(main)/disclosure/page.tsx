@@ -67,7 +67,7 @@ export default function Disclosure({
             알려드려요
           </p>
         </div>
-        <DisclosureTab />
+        <DisclosureTab data={data} />
         <DisclosureContents
           handleSearch={handleSearch}
           ref={inputRef}
@@ -76,6 +76,8 @@ export default function Disclosure({
           isPending={isPending}
           isError={isError}
           error={error}
+          page={page}
+          setPage={setPage}
         />
       </div>
     </main>

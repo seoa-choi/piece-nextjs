@@ -6,7 +6,20 @@ import { useState } from 'react';
 
 const tab = [{ title: '투자공시' }, { title: '경영공시' }];
 
-export default function DisclosureTab() {
+type DisclosureData = {
+  id: number;
+  title: string;
+  date: string;
+};
+
+export default function DisclosureTab({
+  data,
+}: {
+  data?: {
+    result: DisclosureData[];
+    total: number;
+  };
+}) {
   const [selectedBtn, setSelectedBtn] = useState('투자공시');
 
   function handleSelectedBtn(tit: string) {

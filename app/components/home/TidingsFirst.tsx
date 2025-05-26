@@ -35,7 +35,7 @@ export default function TidingsFirst() {
           <p className="text-[18px] text-[#13131399] mb-[16px] font-bold max-sm:text-[16px]">
             공시
           </p>
-          <p className="text-[28px] text-[#292A2E] font-bold tracking-[-0.025em] leading-[28px] whitespace-pre-wrap line-clamp-2 max-sm:text-[22px]">
+          <p className="text-[28px] text-[#292A2E] font-bold tracking-[-0.025em] whitespace-pre-wrap line-clamp-2 max-sm:text-[22px]">
             투자에 필요한 정보를 알려드려요
           </p>
         </div>
