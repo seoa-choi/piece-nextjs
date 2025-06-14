@@ -26,7 +26,9 @@ export default function Disclosure({
 
   const { isPending, data, isError, error } = useQuery<{
     result: DisclosureData[];
+    disclosure: DisclosureData[];
     total: number;
+    mappedTab: string;
   }>({
     queryKey: ['disclosure', page, paramsObj.search, paramsObj.tab],
     queryFn: () => {
@@ -35,6 +37,11 @@ export default function Disclosure({
       ).then((res) => res.json());
     },
   });
+
+  // useEffect(() => {
+  //   console.log('응답 데이터:', data);
+  //   console.log('올데이터', data?.disclosure);
+  // }, [data]);
 
   // 페이지 변경 시 쿼리 파라미터 추가
   useEffect(() => {
@@ -54,6 +61,29 @@ export default function Disclosure({
     setPage(1);
   }
 
+  // 탭
+  const [selectedBtn, setSelectedBtn] = useState('투자공시');
+
+  // mappedTab url반영
+  useEffect(() => {
+    if (data?.mappedTab) {
+      const queryParams = new URLSearchParams({
+        page: page.toString(),
+        search: paramsObj.search,
+        tab: data.mappedTab,
+      });
+
+      router.push(`?${queryParams.toString()}`);
+    }
+  }, [data]);
+
+  function handleSelectedBtn(tit: string) {
+    setSelectedBtn(tit);
+    const mappedTab =
+      tit === '투자공시' ? 'investmentDisclosure' : 'companyDisclosure';
+    router.push(`?tab=${mappedTab}`);
+  }
+
   return (
     <main className="pt-[80px]">
       <div className="pt-[60px] px-[20px] pb-[80px]">
@@ -67,7 +97,14 @@ export default function Disclosure({
             알려드려요
           </p>
         </div>
-        <DisclosureTab data={data} />
+        <DisclosureTab
+          data={data}
+          paramsObj={paramsObj}
+          page={page}
+          selectedBtn={selectedBtn}
+          handleSelectedBtn={handleSelectedBtn}
+        />
+
         <DisclosureContents
           handleSearch={handleSearch}
           ref={inputRef}

@@ -37,6 +37,8 @@ export const disclosureHandlers = [
       return {
         result: data.slice(start, end),
         total: data.length,
+        // 전체 데이터(최신, 오래된 정렬 때문에 보냄)
+        disclosure,
       };
     }
 
@@ -64,7 +66,7 @@ export const disclosureHandlers = [
 
     // console.log(filteredData, 'filteredData 데이터 터미널 확인');
 
-    // 검색 필터 적용
+    // 검색 필터 적용 뭔가 잘못됐음?????
     if (search) {
       const searchedData = filteredData.filter((item) =>
         item.title.toLowerCase().includes(search.toLowerCase())
@@ -79,12 +81,10 @@ export const disclosureHandlers = [
       // 검색 데이터
       return HttpResponse.json(result);
     }
-
     // 페이지 네이션 적용
     const result = getDataByPage(filteredData, page, 10);
 
-    // 기본(탭) 데이터
-    return HttpResponse.json(result);
+    return HttpResponse.json({ result, tabParam: mappedTab });
   }),
 
   http.get('http://localhost:9090/disclosure/:id', async ({ params }) => {

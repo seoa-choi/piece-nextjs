@@ -2,7 +2,6 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import styles from '../home/Style.module.css';
-import { useState } from 'react';
 
 const tab = [{ title: '투자공시' }, { title: '경영공시' }];
 
@@ -14,17 +13,27 @@ type DisclosureData = {
 
 export default function DisclosureTab({
   data,
+  paramsObj,
+  page,
+  selectedBtn,
+
+  handleSelectedBtn,
 }: {
   data?: {
     result: DisclosureData[];
     total: number;
+    mappedTab: string;
   };
-}) {
-  const [selectedBtn, setSelectedBtn] = useState('투자공시');
+  paramsObj: {
+    search: string;
+    page: string;
+    tab: string;
+  };
+  page: number;
+  selectedBtn: string;
 
-  function handleSelectedBtn(tit: string) {
-    setSelectedBtn(tit);
-  }
+  handleSelectedBtn: (tit: string) => void;
+}) {
   return (
     <div className={`${styles['magazine-list']}`}>
       <Swiper>

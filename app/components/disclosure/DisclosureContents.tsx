@@ -30,6 +30,7 @@ export default function DisclosureContents({
 }: {
   data?: {
     result: DisclosureData[];
+    disclosure: DisclosureData[];
     total: number;
   };
   isPending: boolean;
@@ -45,6 +46,7 @@ export default function DisclosureContents({
   setPage: (num: number) => void;
 }) {
   // console.log(data?.result);
+  // console.log(data?.disclosure);
 
   const [totalPage, setTotalPage] = useState(0);
   const [sortOrder, setSortOrder] = useState('최신순');
@@ -68,6 +70,29 @@ export default function DisclosureContents({
     // 최신순, 오래된순 변경
     setSortOrder(sortType);
   }
+
+  // 페이지 네이션 처리를 안한 데이터를 정렬해서 보내기 다른 페이지랑 다름
+  // 큰값 -> 작은값
+  const sortedDataA = data?.disclosure
+    ? [...data.disclosure].sort((a, b) => b.id - a.id)
+    : [];
+  // 작은값 -> 큰값
+  const sortedDataB = data?.disclosure
+    ? [...data.disclosure].sort((a, b) => a.id - b.id)
+    : [];
+
+  const sortedData = sortOrder === '최신순' ? sortedDataA : sortedDataB;
+
+  // 페이지네이션
+  function getDataByPage(data: DisclosureData[], page: number, limit: number) {
+    const start = (page - 1) * limit;
+    const end = start + limit;
+    return data.slice(start, end);
+  }
+
+  //  정렬된 데이터에서 현재 페이지에 해당하는 부분만 추출
+  const updatedResult = getDataByPage(sortedData, page, 10);
+
   return (
     <div className="max-w-[860px] mx-auto">
       <div className="max-w-[860px] pt-[20px] px-[20px] mx-auto">
@@ -113,9 +138,9 @@ export default function DisclosureContents({
         <div className="max-w-[860px] mx-auto pt-[16px] px-[16px]">
           {isPending && <p className="text-center p-[20px]">Loading ... </p>}
           {isError && <p>{error?.message}</p>}
-          {data && data?.result?.length > 0 && (
+          {data && updatedResult.length > 0 && (
             <ul className="grid">
-              {data?.result.map((item) => (
+              {updatedResult.map((item) => (
                 <li
                   key={item.id}
                   className="border-t-1 border-t-[#f2f3f4] py-[16px] last:border-b-1 last:border-b-[#f2f3f4]"
@@ -132,7 +157,7 @@ export default function DisclosureContents({
               ))}
             </ul>
           )}
-          {!isPending && data?.result?.length === undefined && (
+          {!isPending && updatedResult.length === undefined && (
             <p className="text-gray-500 my-[40px] text-center">
               검색결과가 없습니다.
             </p>
