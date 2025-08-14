@@ -1,8 +1,8 @@
 import Image from 'next/image';
 
 const btnList = [
-  { menu: '상품 목록', url: '' },
-  { menu: '청약 가이드', url: '' },
+  { menu: '상품 목록', url: '/product-progress' },
+  { menu: '청약 가이드', url: '/guide' },
   { menu: '공지사항', url: '' },
 ];
 

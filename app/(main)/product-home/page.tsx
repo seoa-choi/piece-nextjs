@@ -12,7 +12,7 @@ export default function ProductHome() {
             상품
           </p>
           <p className="text-[#131313] text-[48px] font-bold leading-[64px] tracking-[-0.03em] max-sm:text-[28px] max-sm:leading-[40px] max-sm:font-semibold">
-            Let's PIECE!
+            Let&apos;s PIECE!
           </p>
         </div>
         <div>

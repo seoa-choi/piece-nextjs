@@ -3,12 +3,12 @@ import Image from 'next/image';
 
 export default function KakaoCounsel({
   className,
-  custom,
-  customImgSize,
+  // custom,
+  // customImgSize,
 }: {
   className: string;
-  custom: string;
-  customImgSize: string;
+  // custom: string;
+  // customImgSize: string;
 }) {
   return (
     <div
@@ -19,13 +19,13 @@ export default function KakaoCounsel({
         alt="카톡 상담하기"
         width={640}
         height={320}
-        className={`absolute right-0 bottom-0 max-w-[320px] w-[calc(26.6667vw)] z-1 max-sm:left-[50%] max-sm:-translate-x-[50%] max-sm:w-[calc(71.1111vw)] ${customImgSize}`}
+        className={`absolute right-0 bottom-0 max-w-[320px] w-[calc(26.6667vw)] z-1 max-sm:left-[50%] max-sm:-translate-x-[50%] max-sm:w-[calc(71.1111vw)] `} // ${customImgSize}
       />
       <p className="text-[28px] text-[#292A2E] font-semibold mb-[10px] max-sm:text-[22px] max-sm:leading-[28px] max-sm:mb-[8px]">
         카톡 상담하기
       </p>
       <div
-        className={`flex items-center gap-[8px] z-10 max-sm:flex-col max-sm:items-start ${custom}`}
+        className={`flex items-center gap-[8px] z-10 max-sm:flex-col max-sm:items-start `} // ${custom}
       >
         <p className="text-[18px] text-[#292A2E] font-semibold z-10 max-sm:text-[16px] max-sm:leading-[22px]">
           평일 오전 9:00 ~ 오후 5:30

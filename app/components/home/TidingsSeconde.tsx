@@ -42,7 +42,7 @@ export default function TidingsSeconde() {
               제휴 문의하기
             </p>
             <p className="text-[18px] text-white z-10 max-sm:text-[16px] max-sm:leading-[22px] max-sm:mb-[8px]">
-              함께 성장해요 Let's PIECE!
+              함께 성장해요 Let&apos;s PIECE!
             </p>
           </div>
           <Image

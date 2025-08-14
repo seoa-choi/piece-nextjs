@@ -58,6 +58,8 @@ export default function MagazineTap({
     );
   }, [paramsObj.tab]);
 
+  console.log(page, activeTab);
+
   return (
     <div className={`${styles['magazine-list']}`}>
       <Swiper>

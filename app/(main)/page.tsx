@@ -13,7 +13,7 @@ import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 
 export default function Home() {
-  const now = formatDate(new Date());
+  // const now = formatDate(new Date());
 
   useEffect(() => {
     if (typeof window !== 'undefined') {

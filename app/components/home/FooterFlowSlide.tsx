@@ -118,6 +118,3 @@ export default function FooterFlowSlide() {
     </div>
   );
 }
-function useRef(arg0: null) {
-  throw new Error('Function not implemented.');
-}

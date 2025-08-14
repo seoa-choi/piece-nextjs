@@ -84,6 +84,12 @@ export default function Disclosure({
     router.push(`?tab=${mappedTab}`);
   }
 
+  // 임시 빌드 에러방지용
+  console.log(data);
+  console.log(paramsObj);
+  console.log(page);
+
+
   return (
     <main className="pt-[80px]">
       <div className="pt-[60px] px-[20px] pb-[80px]">
