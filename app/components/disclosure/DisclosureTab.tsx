@@ -34,6 +34,11 @@ export default function DisclosureTab({
 
   handleSelectedBtn: (tit: string) => void;
 }) {
+
+  console.log(data,
+  paramsObj,
+  page,);
+  
   return (
     <div className={`${styles['magazine-list']}`}>
       <Swiper>
